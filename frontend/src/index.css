@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --wgw-bg: #0b0b0b;
+  --wgw-panel: #0f1113;
+  --wgw-gold: #D4AF37;
+  --wgw-gold-accent: #BFA05A;
+  --wgw-text: #F5F5F4;
+}
+
+body {
+  background-color: var(--wgw-bg);
+  color: var(--wgw-text);
+  font-family: Inter, sans-serif;
+}
+
+.card {
+  background-color: var(--wgw-panel);
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, var(--wgw-gold) 0%, var(--wgw-gold-accent) 100%);
+  color: #111;
+}
+
+.muted { color: #cfc8b8 }
+
+/* Card shadow and spacing for luxury feel */
+.card {
+  background-color: var(--wgw-panel);
+  box-shadow: 0 8px 30px rgba(2,2,2,0.7);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.headline {
+  font-family: 'Playfair Display', serif;
+  color: var(--wgw-text);
+}
+
+.btn-gold:hover { filter: brightness(0.98); transform: translateY(-1px); }
+
+/* Prose tweaks */
+.prose-invert { color: var(--wgw-text); }
+
+/* Page background: subtle radial texture and deep black */
+body {
+  background-image: radial-gradient(rgba(255,255,255,0.01) 1px, transparent 1px), linear-gradient(180deg, #070707 0%, #0b0b0b 100%);
+  background-size: 40px 40px, cover;
+}
+
+/* Form controls */
+.form-label { display:block; font-size:0.95rem; color: #d6cdb7; margin-bottom: 0.5rem }
+.input, textarea, select { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); color: var(--wgw-text); padding: 0.5rem 0.75rem; border-radius: 6px; }
+.input:focus, textarea:focus, select:focus { outline: none; box-shadow: 0 0 0 3px rgba(212,175,55,0.08); border-color: var(--wgw-gold-accent); }
+
+.row { display:flex; gap:1rem; align-items:center }
+
+/* Range slider styled */
+input[type="range"] { -webkit-appearance: none; width: 200px; height: 6px; background: rgba(255,255,255,0.04); border-radius: 6px; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width:18px; height:18px; background: var(--wgw-gold); border-radius:50%; box-shadow: 0 2px 6px rgba(0,0,0,0.6); }
+
+/* File inputs styled wrapper */
+.file-btn { background: rgba(255,255,255,0.03); padding: 0.5rem 0.75rem; border-radius:6px; border:1px solid rgba(255,255,255,0.03); color:var(--wgw-text) }
+
+/* Accent left stripe for section headers */
+.section-acc { border-left: 4px solid var(--wgw-gold); padding-left:1rem }
+
+/* Subtle footer */
+footer { color: #bfb6a1; font-size:0.9rem; margin-top:2rem }
