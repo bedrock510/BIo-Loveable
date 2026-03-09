@@ -913,7 +913,7 @@ export default function App() {
       fd.append('stress_level', formData.stressLevel);
       fd.append('primary_goal', formData.goal || '');
 
-      const res = await fetch('http://localhost:8000/analyze', {
+      const res = await fetch('https://bio-loveable.onrender.com/analyze', {
         method: 'POST',
         body: fd,
       });
