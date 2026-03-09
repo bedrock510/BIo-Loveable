@@ -6,6 +6,6 @@ librosa
 numpy<2.0
 anthropic
 python-multipart
-tensorflow==2.13.0
+tensorflow-cpu
 tf-keras
 python-dotenv
